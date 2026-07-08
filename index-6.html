@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Caregiver Certificate — NurseBridge Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#122229;
+    --ink-soft:#1C333C;
+    --paper:#FBFAF7;
+    --paper-dim:#F1EEE6;
+    --gold:#B9873F;
+    --gold-tint:#F5EDDF;
+    --line:#E3DECF;
+    --text-soft:#4A5A5C;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Zilla Slab',serif;margin:0;letter-spacing:-0.01em;}
+  .mono{font-family:'IBM Plex Mono',monospace;font-size:0.74rem;letter-spacing:0.08em;text-transform:uppercase;}
+  a{color:inherit;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 28px;}
+  .wrap-narrow{max-width:760px;margin:0 auto;padding:0 28px;}
+
+  header{position:sticky;top:0;z-index:20;background:rgba(251,250,247,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;max-width:960px;margin:0 auto;padding-left:28px;padding-right:28px;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand .logo-mark{width:28px;height:auto;}
+  .brand span{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.05rem;}
+  .nav-cta{background:var(--ink);color:#fff;padding:10px 20px;border-radius:2px;font-size:0.85rem;font-weight:600;text-decoration:none;}
+
+  .hero{background:var(--ink);color:#fff;padding:64px 0 0;overflow:hidden;}
+  .hero-inner{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;padding-bottom:56px;}
+  .tagline{font-family:'Zilla Slab',serif;font-style:italic;color:#C9B183;font-size:1rem;margin-bottom:14px;}
+  .hero h1{font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:#fff;margin-bottom:18px;}
+  .hero p.lead{color:#C9D3D1;font-size:1.02rem;max-width:46ch;margin-bottom:28px;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:2px;font-size:0.9rem;font-weight:600;text-decoration:none;transition:all .15s;}
+  .btn.primary{background:var(--gold);color:var(--ink);}
+  .btn.primary:hover{background:#cf9a4c;}
+  .hero-photo{width:100%;max-width:320px;border-radius:6px;box-shadow:0 24px 50px rgba(0,0,0,0.4);}
+  .hero-photo-wrap{display:flex;justify-content:center;}
+
+  .badge-row{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(255,255,255,0.12);}
+  .badge{padding:22px 14px;text-align:center;border-right:1px solid rgba(255,255,255,0.12);}
+  .badge:last-child{border-right:none;}
+  .badge .mono{color:#C9B183;}
+  .badge .val{font-family:'Zilla Slab',serif;font-weight:600;font-size:1rem;color:#fff;margin-top:4px;}
+
+  .section{padding:72px 0;}
+  .section.dim{background:var(--paper-dim);}
+  .section-head{margin-bottom:36px;max-width:60ch;}
+  .section-head .mono{color:var(--gold);display:block;margin-bottom:10px;}
+  .section-head h2{font-size:1.7rem;font-weight:600;}
+  .section-head p{color:var(--text-soft);margin-top:12px;}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
+  .two-col h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;color:var(--gold);}
+  .two-col p{color:var(--text-soft);font-size:0.96rem;}
+
+  .benefit-list{margin-top:8px;list-style:none;padding:0;}
+  .benefit-list li{padding:12px 0 12px 28px;position:relative;border-bottom:1px solid var(--line);color:var(--text-soft);font-size:0.96rem;}
+  .benefit-list li::before{content:"—";position:absolute;left:0;color:var(--gold);font-weight:700;}
+
+  .quote-block{margin-top:40px;padding:28px 32px;background:var(--gold-tint);border-left:3px solid var(--gold);border-radius:0 4px 4px 0;}
+  .quote-block h4{font-size:1.05rem;font-weight:600;margin-bottom:8px;}
+  .quote-block p{color:var(--text-soft);font-size:0.94rem;margin:0;}
+
+  table.fee-table{width:100%;border-collapse:collapse;margin-top:8px;}
+  table.fee-table th{background:var(--ink);color:#fff;text-align:left;padding:14px 18px;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;}
+  table.fee-table td{padding:14px 18px;border-bottom:1px solid var(--line);font-size:0.94rem;}
+  table.fee-table tr:last-child td{font-weight:700;background:var(--gold-tint);}
+
+  .modules{margin-top:8px;}
+  details.module{border:1px solid var(--line);border-radius:5px;margin-bottom:10px;background:#fff;overflow:hidden;}
+  details.module summary{
+    padding:18px 22px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;
+    font-weight:600;font-size:0.98rem;
+  }
+  details.module summary::-webkit-details-marker{display:none;}
+  details.module summary .hrs{font-family:'IBM Plex Mono',monospace;font-size:0.74rem;color:var(--gold);white-space:nowrap;}
+  details.module summary::after{content:"+";font-size:1.3rem;color:var(--gold);font-weight:400;margin-left:auto;}
+  details.module[open] summary::after{content:"–";}
+  details.module .module-body{padding:0 22px 20px;}
+  details.module .module-body ul{margin:0;padding-left:18px;color:var(--text-soft);font-size:0.9rem;}
+  details.module .module-body li{margin-bottom:6px;}
+
+  .assess-list{list-style:none;padding:0;margin-top:8px;}
+  .assess-list li{padding:14px 0;border-bottom:1px solid var(--line);font-size:0.95rem;color:var(--text-soft);}
+  .assess-list li b{color:var(--ink);}
+
+  .suitable-box{margin-top:36px;padding:24px 28px;background:#fff;border:1px solid var(--line);border-radius:5px;}
+  .suitable-box .mono{color:var(--gold);display:block;margin-bottom:10px;}
+  .suitable-box p{color:var(--text-soft);font-size:0.94rem;margin:0;}
+
+  .enroll-section{background:var(--ink);color:#fff;padding:64px 0;}
+  .enroll-section .section-head h2{color:#fff;}
+  .enroll-section .section-head p{color:#C9D3D1;}
+  .enroll-section .mono{color:var(--gold);}
+  .form-wrap{background:#fff;border-radius:6px;overflow:hidden;margin-top:20px;}
+  .form-wrap iframe{width:100%;border:none;display:block;height:1400px;}
+
+  footer{padding:34px 0;border-top:1px solid var(--line);}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+  footer p{font-size:0.82rem;color:var(--text-soft);margin:0;}
+  footer a{text-decoration:none;font-weight:600;}
+
+  @media (max-width:760px){
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-photo-wrap{order:-1;max-width:220px;margin:0 auto;}
+    .badge-row{grid-template-columns:repeat(2,1fr);}
+    .badge:nth-child(2){border-right:none;}
+    .two-col{grid-template-columns:1fr;gap:28px;}
+    .form-wrap iframe{height:1600px;}
+  }
+  .wa-float{
+    position:fixed;bottom:24px;right:24px;z-index:50;
+    width:58px;height:58px;border-radius:50%;
+    background:#25D366;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 22px rgba(0,0,0,0.28);
+    animation:wa-pulse 2.6s ease-in-out infinite;
+    text-decoration:none;
+  }
+  .wa-float:hover{background:#20bd5a;}
+  @keyframes wa-pulse{
+    0%,100%{box-shadow:0 8px 22px rgba(0,0,0,0.28),0 0 0 0 rgba(37,211,102,0.4);}
+    50%{box-shadow:0 8px 22px rgba(0,0,0,0.28),0 0 0 10px rgba(37,211,102,0);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .wa-float{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand"><img src="logo.png" alt="NurseBridge Academy logo" class="logo-mark"><span>NurseBridge Academy</span></div>
+    <a class="nav-cta" href="#enroll">Enroll Now</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="tagline">"Empowering Skills. Enriching Lives."</div>
+      <h1>Become a Certified Professional Caregiver</h1>
+      <p class="lead">Earn your Professional Caregiver Certificate through a practical, skills-based programme — online theory combined with real clinical placement at a partner healthcare facility.</p>
+      <a class="btn primary" href="#enroll">Enroll Now — $300</a>
+    </div>
+    <div class="hero-photo-wrap">
+      <img src="hero-caregiver.jpg" alt="NurseBridge caregiver supporting a patient" class="hero-photo">
+    </div>
+  </div>
+  <div class="badge-row">
+    <div class="badge"><span class="mono">Award</span><div class="val">CPD Certificate &amp; Transcript</div></div>
+    <div class="badge"><span class="mono">Duration</span><div class="val">4 Months Total</div></div>
+    <div class="badge"><span class="mono">Contact Hours</span><div class="val">410 Hours</div></div>
+    <div class="badge"><span class="mono">Payment</span><div class="val">Flexible Plans</div></div>
+    <div class="badge"><span class="mono">Availability</span><div class="val">Limited Slots</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">About the Programme</span>
+      <h2>Practical training, built around real care</h2>
+    </div>
+    <div class="two-col">
+      <div>
+        <h3>About NurseBridge Academy</h3>
+        <p>NurseBridge Academy is committed to providing practical caregiver education focused on developing professional caregiving skills for home and community support environments.</p>
+        <p><b>Mission:</b> To develop competent, compassionate, and professional caregivers through quality training.</p>
+      </div>
+      <div>
+        <h3>Why Become a Certified Caregiver?</h3>
+        <p>The demand for caregiving skills continues to grow, both professionally and within families and communities. Professional caregiver education provides the knowledge, confidence, and practical skills needed to support others safely and effectively.</p>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <h4>Caring for your loved ones still requires knowledge</h4>
+      <p>Caregiving isn't only for employment. Many people care for parents, grandparents, spouses, children, or relatives without any formal preparation. Professional caregiver education helps individuals provide safer, more effective, and more compassionate support to their loved ones.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section dim">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">Benefits</span>
+      <h2>What you'll gain</h2>
+    </div>
+    <ul class="benefit-list">
+      <li>Gain practical, hands-on caregiving skills</li>
+      <li>Improve your professional opportunities</li>
+      <li>Build confidence in supporting others</li>
+      <li>Learn safe and effective caregiving practices</li>
+      <li>Receive a Professional Caregiver Certificate and Official Academic Transcript</li>
+      <li>Develop valuable life skills that benefit both individuals and families</li>
+    </ul>
+
+    <div class="suitable-box">
+      <span class="mono">Suitable for</span>
+      <p>Individuals caring for elderly parents or relatives, family members supporting loved ones with disabilities, community volunteers, individuals preparing for future caregiving responsibilities, people interested in practical life skills, and individuals seeking professional caregiving opportunities.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">Programme Details</span>
+      <h2>Duration, structure &amp; fees</h2>
+      <p>Theory is delivered 100% online. Clinical placement takes place in person at a partner healthcare facility.</p>
+    </div>
+    <table class="fee-table">
+      <tr><th>Description</th><th>Details</th></tr>
+      <tr><td>Programme Name</td><td>Professional Caregiver Certificate Programme</td></tr>
+      <tr><td>Online Theory</td><td>3 Months / 290 Hours</td></tr>
+      <tr><td>Clinical Placement</td><td>1 Month / 120 Hours (partner healthcare facility)</td></tr>
+      <tr><td>Total Duration / Contact Hours</td><td>4 Months / 410 Hours</td></tr>
+      <tr><td>Award</td><td>Professional Caregiver Certificate &amp; Official Academic Transcript</td></tr>
+      <tr><td>Total Programme Fee</td><td>$300</td></tr>
+    </table>
+    <p style="color:var(--text-soft);font-size:0.88rem;margin-top:14px;">Flexible payment plans are available — contact the academy for current instalment options.</p>
+  </div>
+</section>
+
+<section class="section dim">
+  <div class="wrap-narrow">
+    <div class="section-head">
+      <span class="mono">Curriculum</span>
+      <h2>Global standard curriculum, module by module</h2>
+      <p>Fully optimized to align with international care frameworks and the UK Care Certificate. Tap a module to see what's covered.</p>
+    </div>
+    <div class="modules">
+      <details class="module">
+        <summary>Module 1: Introduction to Caregiving &amp; Your Professional Role <span class="hrs">10 Hours</span></summary>
+        <div class="module-body"><ul>
+          <li>Understanding the caregiver's role, professional boundaries, and accountability</li>
+          <li>Working as part of an interdisciplinary healthcare and home care team</li>
+          <li>The importance of worker regulation, codes of conduct, and professional development</li>
+        </ul></div>
+      </details>
+      <details class="module">
+        <summary>Module 2: Advanced Communication &amp; Documentation Skills <span class="hrs">15 Hours</span></summary>
+        <div class="module-body"><ul>
+          <li>Overcoming verbal and non-verbal communication barriers</li>
+          <li>Active listening techniques and handling sensitive, confidential information</li>
+          <li>Accurate clinical record-keeping, incident reporting, and multilingual communication adaptations</li>
+        </ul></div>
+      </details>
+      <details class="module">
+        <summary>Module 3: Ethics, Duty of Care, and Professional Conduct <span class="hrs">10 Hours</span></summary>
+        <div class="module-body"><ul>
+          <li>Core principles of the Duty of Care and promoting client independence</li>
+          <li>Managing ethical dilemmas, conflicts of interest, and patient rights</li>
+          <li>Understanding confidentiality, data protection, and the right to make choices</li>
+        </ul></div>
+      </details>
+      <details class="module">
+        <summary>Module 4: Personal Care Support, Privacy, and Dignity <span class="hrs">25 Hours</span></summary>
+        <div class="module-body"><ul>
+          <li>Assisting with activities of daily living (bathing, grooming, dressing, oral care)</li>
+          <li>Maintaining skin integrity, pressure ulcer prevention, and continence care</li>
+          <li>Upholding privacy, dignity, and respect while delivering intimate personal care</li>
+        </ul></div>
+      </details>
+      <details class="module">
+        <summary>Module 5: Moving and Handling / Mobility Assistance <span class="hrs">20 Hours</span></summary>
+        <div class="module-body"><ul>
+          <li>Ergonomic principles of safe lifting, body mechanics, and back care</li>
+          <li>Safe transfer techniques (bed to chair, chair to commode, repositioning)</li>
+          <li>Correct usage of assistive mobility devices, hoists, slide sheets, and walking frames</li>
+        </ul></div>
+      </details>
+      <details class="module">
+        <summary>Module 6: Nutrition, Hydration, and Food Safety <span class="hrs">15 Hours</span></summary>
+        <div class="module-body"><ul>
+          <li>Principles of balanced nutrition, dietary requirements, and specialized diets</li>
+          <li>Monitoring fluid intake, recognizing signs of dehydration and malnutrition</li>
+          <li>Hygienic food preparation, handling, and assisting individuals with swallowing difficulties (dysphagia)</li>
+        </ul></div>
+      </details>
+      <details class="module">
+        <summary>Module 7: Home Safety, Wellbeing, and Infection Prevention &amp; Control <span class="hrs">15 Hours</span></summary>
+        <div class="module-body"><ul>
+          <li>Identifying household hazards, risk assessment, and maintaining safe environments</li>
+          <li>Infection prevention, universal precautions, hand hygiene, and cross-contamination prevention</li>
+          <li>Correct use of Personal Protective Equipment (PPE) and safe management of clinical waste</li>
+        </ul></div>
+      </details>
+      <details class="module">
+        <summary>Module 8: Elderly Care &amp; Adult Safeguarding <span class="hrs">25 Hours</span></summary>
+        <div class="module-body"><ul>
+          <li>Physical, psychological, and social aspects of aging</li>
+          <li>Managing age-related chronic conditions (arthritis, hypertension, diabetes)</li>
+          <li>Recognizing, preventing, and reporting signs of elder abuse, exploitation, or neglect</li>
+        </ul></div>
+      </details>
+      <details class="module">
+        <summary>Module 9: Disability Support &amp; Person-Centered Care <span class="hrs">15 Hours</span></summary>
+        <div class="module-body"><ul>
+          <li>Caring for individuals with physical, sensory, neurodivergent, or learning disabilities</li>
+          <li>Promoting social inclusion, autonomy, and implementing individual support plans</li>
+          <li>The principles of person-centered care, ensuring the individual remains at the center of all choices</li>
+        </ul></div>
+      </details>
+      <details class="module">
+        <summary>Module 10: Child, Family, and Safeguarding Support <span class="hrs">10 Hours</span></summary>
+        <div class="module-body"><ul>
+          <li>Basic child development milestones and pediatric care dynamics</li>
+          <li>Family-centered care models, communication with parents, and emotional support</li>
+          <li>Recognizing indicators of child abuse, domestic vulnerability, and reporting procedures</li>
+        </ul></div>
+      </details>
+      <details class="module">
+        <summary>Module 11: Mental Health, Dementia, and Emotional Wellbeing <span class="hrs">10 Hours</span></summary>
+        <div class="module-body"><ul>
+          <li>Introduction to common mental health conditions (depression, anxiety, psychosis)</li>
+          <li>Core principles of person-centered dementia care and memory support</li>
+          <li>De-escalation strategies and managing behaviors that challenge, with empathy and patience</li>
+        </ul></div>
+      </details>
+      <details class="module">
+        <summary>Module 12: Basic Life Support, Practical Simulations &amp; Competency Assessment <span class="hrs">10 Hours</span></summary>
+        <div class="module-body"><ul>
+          <li>Cardiopulmonary Resuscitation (CPR) for adults, children, and infants</li>
+          <li>Choking management, basic first aid, and managing medical emergencies (seizures, fainting)</li>
+          <li>Simulated patient scenarios and final direct observation of practical clinical competencies</li>
+        </ul></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">Assessment</span>
+      <h2>Grading framework</h2>
+    </div>
+    <ul class="assess-list">
+      <li><b>Continuous Assessment (30%)</b> — Quizzes, reflective logbooks, case studies, and classroom participation</li>
+      <li><b>Practical Competency Assessment (40%)</b> — Direct observation of physical skills (hand hygiene technique, safe moving and handling, CPR simulation) during clinical placement</li>
+      <li><b>Final Examination (30%)</b> — Comprehensive written evaluation covering all theoretical modules</li>
+    </ul>
+  </div>
+</section>
+
+<section class="enroll-section" id="enroll">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">Ready to start</span>
+      <h2>Enroll in the Caregiver Certificate Programme</h2>
+      <p>Complete the form below to apply. Total programme fee is $300 — flexible payment plans available. We'll follow up by email once we've reviewed your application.</p>
+    </div>
+    <div class="form-wrap">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdDSMrEweeuPFXqYhIRohVpV_Q5_SB9DoitYJy01Ci1niRRLg/viewform?embedded=true">Loading…</iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><span class="mono" style="color:var(--text-soft);">NurseBridge Academy</span></div>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+      <a href="https://thecpdregister.com" target="_blank" rel="noopener">
+        <img src="cpd-badge.png" alt="CPD Approved Provider #790554 - verify at thecpdregister.com" style="height:38px;width:auto;">
+      </a>
+      <p>© 2026 NurseBridge Academy · <a href="mailto:nursebridgeacademy@gmail.com">nursebridgeacademy@gmail.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/250796503158?text=Hi%2C%20I%27m%20interested%20in%20the%20Professional%20Caregiver%20Certificate%20Programme" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3c1.5.8 3.2 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.5 1 1-3.4-.2-.3C3.5 14.6 3 13.3 3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9z"/></svg>
+</a>
+</body>
+</html>
